@@ -134,41 +134,34 @@ int height(Node *root){
 //Function to return a list containing the level order traversal in spiral form.
 vector<int> findSpiral(Node *root)
 {
+    bool rightToLeft = true;
+    stack<Node*> currentLevel;
+    stack<Node*> nextLevel;
     vector<int> result;
-    queue<Node*> currentLevel;
-    queue<Node*> nextLevel;
     currentLevel.push(root);
-    cout<<height(root)<<endl;
-    bool rightToLeft = height(root) % 2 == 0 ? false : true;
 
     while (currentLevel.size() > 0)
     {
-        while (currentLevel.size() > 0) {
-            auto node = currentLevel.front();
-            currentLevel.pop();
-            
-            if (node == nullptr)
-                continue;
+        auto currentNode = currentLevel.top();
+        currentLevel.pop();
 
-            result.push_back(node->data);
-            
+        if (currentNode != nullptr){
+            result.push_back(currentNode->data);
+
             if (rightToLeft){
-                nextLevel.push(node->right);
-                nextLevel.push(node->left);
-            }
-            else
-            {
-                nextLevel.push(node->left);
-                nextLevel.push(node->right);
+                nextLevel.push(currentNode->right);
+                nextLevel.push(currentNode->left);
+            } else { 
+                nextLevel.push(currentNode->left);
+                nextLevel.push(currentNode->right);
             }
         }
-        
         if (currentLevel.size() == 0){
             currentLevel = nextLevel;
-            nextLevel = queue<Node*>();
             rightToLeft = !rightToLeft;
+            nextLevel = stack<Node*>();
         }
-    }
+    } 
 
     return result;
 }
