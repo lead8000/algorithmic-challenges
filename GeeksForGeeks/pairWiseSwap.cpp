@@ -34,40 +34,31 @@ struct Node
 */
 class Solution
 {
-    void swapNodes(struct Node& fst, struct Node& scd)
+    void swapNodes(Node *prev, Node *fst, Node *scd)
     {
-        auto tmp2 = fst.next;
-        fst.next = scd.next;
-        scd.next = &fst;
-    }
-    void printList(Node* node) 
-    { 
-	    while (node != NULL) { 
-		    cout << node->data <<" "; 
-		    node = node->next; 
-	    }  
-	    cout<<"\n";
+		if (prev != nullptr)
+			prev->next = scd;
+        fst->next = scd->next;
+        scd->next = fst;
     }
     public:
     Node* pairWiseSwap(struct Node* head) 
     {
-        auto current = head;
-        auto first = head;
+        auto current = head, first = head;
+		Node *previous = nullptr;
         int count=0;
 
         while (current != nullptr && current->next != nullptr)
         {
-            auto fst = *current;
-            auto scd = *current->next;
-            swapNodes(fst, scd);
             if (count == 0){
-                first = &scd;
-                count++;
+				first=current->next;
+				count++;
             }
-            current = fst.next;
+            swapNodes(previous, current, current->next);
+			previous = current;
+			current = current->next;
         }
-        printList(first);
-        // cout<<"yESSS\n";
+		
         return first;
     }
 };
