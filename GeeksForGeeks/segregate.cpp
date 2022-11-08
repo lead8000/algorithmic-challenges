@@ -75,14 +75,20 @@ class Solution
     //Function to sort a linked list of 0s, 1s and 2s.
     Node* segregate(Node *head) {
         // sort 0s at first
+        printList(head);
         auto result = sortFirstXs(head, 0);
         auto newHead = result[0];
-        printList(newHead);
-        cout<<head<<endl<<result[1]<<endl;
         // sort 1s at end
-        head = result[1];
-        sortFirstXs(head, 1);
-        return newHead;
+        cout<<"first: ";
+        printList(result[1]);
+        cout<<"newHead: ";
+        printList(result[0]);
+        cout<<result[0]<<' '<<result[1]<<' '<<result[2]<<endl;
+        if (result[0] == result[1])
+            result = sortFirstXs(result[1], 1, result[2]);
+        else
+            sortFirstXs(result[1], 1, result[2]);
+        return result[0];
     }
 };
 
