@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(leetcode.WinnerOfGame("ABBBBBBBAAA"))
+	fmt.Println(leetcode.LongestSubarray([]int{1, 2, 3, 3, 2, 2}))
 }
