@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "vector": "cpp"
     }
 }
