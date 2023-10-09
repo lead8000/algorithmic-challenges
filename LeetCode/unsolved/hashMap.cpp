@@ -3,11 +3,11 @@ class Node {
 public:
     int Key;
     int Value;
-    int balancingFactor;
+    int H;
     Node* Parent{nullptr};
     Node* Left{nullptr};
     Node* Right{nullptr};
-    
+
     Node(int key, int value){
         this->Key = key;
         this->Value = value;
@@ -58,6 +58,14 @@ private:
         if (current->Left != nullptr)
             return min(current->Left, key);
         return current;
+    }
+
+    void rightRotation(Node* current) {
+
+    }
+
+    void leftRotation(Node* current) {
+
     }
 
 public:

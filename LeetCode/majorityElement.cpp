@@ -1,46 +1,39 @@
-#include <bits/stdc++.h>
+#include "solution.h"
 
-using namespace std;
+// more efficient
+vector<int> Solution::majorityElement(vector<int>& nums) {
+    map<int, int> freq;
+    int N = nums.size();
 
-
-class Solution {
-public:
-
-    // more efficient
-    vector<int> majorityElement(vector<int>& nums) {
-        map<int, int> freq;
-        int N = nums.size();
-
-        for (const auto& n: nums){
-            freq[n] += 1;
+    for (const auto& n: nums){
+        freq[n] += 1;
+    }
+    
+    vector<int> result;
+    for (const auto& n: freq) {
+        if (n.second > floor(N / 3)) {
+            result.push_back(n.first);
         }
-        
-        vector<int> result;
-        for (const auto& n: freq) {
-            if (n.second > floor(N / 3)) {
-                result.push_back(n.first);
-            }
-        }
-
-        return result;
     }
 
-    // vector<int> majorityElement(vector<int>& nums) {
-    //     unordered_map<int, int> freq;
+    return result;
+}
 
-    //     // accumulate the freq of the elements
-    //     for (const auto& n: nums){ freq[n]++; }
+// vector<int> majorityElement(vector<int>& nums) {
+//     unordered_map<int, int> freq;
 
-    //     vector<int> result;
-    //     int threshold = floor(nums.size() / 3);
+//     // accumulate the freq of the elements
+//     for (const auto& n: nums){ freq[n]++; }
 
-    //     // get the highest freq elements
-    //     for (const auto& n: freq) {
-    //         if (n.second > threshold) {
-    //             result.push_back(n.first);
-    //         }
-    //     }
+//     vector<int> result;
+//     int threshold = floor(nums.size() / 3);
 
-    //     return result;
-    // }
-};
+//     // get the highest freq elements
+//     for (const auto& n: freq) {
+//         if (n.second > threshold) {
+//             result.push_back(n.first);
+//         }
+//     }
+
+//     return result;
+// }
