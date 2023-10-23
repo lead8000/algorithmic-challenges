@@ -3,8 +3,14 @@
 
 int main() {
     Solution sol;
-    vector<int> nums = {1, 3, 5, 2, 7};  // Puedes cambiar esto por los valores que desees
-    int result = sol.minOperations(nums);
-    cout << "Resultado: " << result << endl;
+
+    vector<vector<int>> flowers = {{1,6},{3,7},{9,12},{4,13}};
+    vector<int> people = {2,3,7,11};
+    auto result = sol.fullBloomFlowers(flowers, people);
+
+    for (auto &&i : result) 
+        cout<<i<<" ";
+    cout<<endl;
+
     return 0;
 }

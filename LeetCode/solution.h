@@ -6,4 +6,5 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums);
     int minOperations(vector<int>& nums);
+    vector<int> fullBloomFlowers(vector<vector<int>>& flowers, vector<int>& people);
 };
