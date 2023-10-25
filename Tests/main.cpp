@@ -4,13 +4,13 @@
 int main() {
     Solution sol;
 
-    vector<vector<int>> flowers = {{1,6},{3,7},{9,12},{4,13}};
-    vector<int> people = {2,3,7,11};
-    auto result = sol.fullBloomFlowers(flowers, people);
+    auto result = sol.generate(5);
 
-    for (auto &&i : result) 
-        cout<<i<<" ";
-    cout<<endl;
+    for (auto &&row : result){
+        for (auto &&i : row)
+            cout<<i<<" ";
+        cout<<endl;
+    } 
 
     return 0;
 }
