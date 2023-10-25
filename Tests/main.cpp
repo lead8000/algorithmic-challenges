@@ -4,13 +4,14 @@
 int main() {
     Solution sol;
 
-    auto result = sol.generate(5);
+    auto result = sol.kthGrammar(2, 2);
 
-    for (auto &&row : result){
-        for (auto &&i : row)
-            cout<<i<<" ";
-        cout<<endl;
-    } 
+    cout<<"answer: "<<result<<endl;
+    // for (auto &&row : result){
+    //     for (auto &&i : row)
+    //         cout<<i<<" ";
+    //     cout<<endl;
+    // } 
 
     return 0;
 }

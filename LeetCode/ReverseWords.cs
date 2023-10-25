@@ -1,6 +1,6 @@
-// 1/10/2023
+namespace LeetCode;
 
-public class Solution {
+public partial class Solution {
     public string ReverseWords(string s) {
         var words = s.Split(' ');
         string result = "";
