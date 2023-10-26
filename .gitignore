@@ -33,3 +33,6 @@
 
 __pycache__
 output
+obj/
+bin/
+test
