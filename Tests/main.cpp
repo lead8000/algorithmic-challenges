@@ -4,7 +4,7 @@
 int main() {
     Solution sol;
 
-    auto result = sol.kthGrammar(2, 2);
+    auto result = sol.longestPalindrome("cbbd");
 
     cout<<"answer: "<<result<<endl;
     // for (auto &&row : result){

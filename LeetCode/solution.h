@@ -9,4 +9,5 @@ public:
     vector<int> fullBloomFlowers(vector<vector<int>>& flowers, vector<int>& people);
     vector<vector<int>> generate(int numRows);
     int kthGrammar(int n, int k);
+    string longestPalindrome(string s);
 };
