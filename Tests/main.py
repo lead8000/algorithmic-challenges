@@ -1,8 +1,8 @@
 import sys
 sys.path.append('..')
 
-from LeetCode.countBits import Solution
+from LeetCode.countVowelPermutation import Solution
 
 if __name__ == '__main__':
     solver = Solution()
-    print(solver.countBits(8))    
+    print(solver.countVowelPermutation(10**4))    

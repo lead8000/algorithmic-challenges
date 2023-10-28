@@ -10,4 +10,6 @@ public:
     vector<vector<int>> generate(int numRows);
     int kthGrammar(int n, int k);
     string longestPalindrome(string s);
+    vector<int> getRow(int rowIndex);
+    int maxProfit(vector<int>& prices);
 };
