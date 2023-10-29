@@ -12,4 +12,5 @@ public:
     string longestPalindrome(string s);
     vector<int> getRow(int rowIndex);
     int maxProfit(vector<int>& prices);
+    int poorPigs(int buckets, int minutesToDie, int minutesToTest);
 };

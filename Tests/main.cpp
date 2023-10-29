@@ -4,7 +4,7 @@
 int main() {
     Solution sol;
 
-    auto result = sol.longestPalindrome("cbbd");
+    auto result = sol.poorPigs(1000, 15, 60);
 
     cout<<"answer: "<<result<<endl;
     // for (auto &&row : result){
