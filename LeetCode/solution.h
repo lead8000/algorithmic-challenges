@@ -13,4 +13,6 @@ public:
     vector<int> getRow(int rowIndex);
     int maxProfit(vector<int>& prices);
     int poorPigs(int buckets, int minutesToDie, int minutesToTest);
+    vector<int> sortByBits(vector<int>& arr);
+    int climbStairs(int n);
 };
