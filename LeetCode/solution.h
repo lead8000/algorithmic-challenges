@@ -15,4 +15,6 @@ public:
     int poorPigs(int buckets, int minutesToDie, int minutesToTest);
     vector<int> sortByBits(vector<int>& arr);
     int climbStairs(int n);
+    vector<int> findArray(vector<int>& pref);
+    int getMaximumGenerated(int n);
 };
