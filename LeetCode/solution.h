@@ -29,4 +29,6 @@ public:
     int getMaximumGenerated(int n);
     vector<int> findMode(TreeNode* root);
     bool isSubsequence(string s, string t);
+    int averageOfSubtree(TreeNode* root);
+    vector<TreeNode*> allPossibleFBT(int n);
 };
