@@ -31,4 +31,5 @@ public:
     bool isSubsequence(string s, string t);
     int averageOfSubtree(TreeNode* root);
     vector<TreeNode*> allPossibleFBT(int n);
+    vector<string> buildArray(vector<int>& target, int n);
 };
