@@ -32,4 +32,5 @@ public:
     int averageOfSubtree(TreeNode* root);
     vector<TreeNode*> allPossibleFBT(int n);
     vector<string> buildArray(vector<int>& target, int n);
+    int pseudoPalindromicPaths (TreeNode* root);
 };
