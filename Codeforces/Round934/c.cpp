@@ -11,20 +11,21 @@ void solve(vector<int> a, int n)
         dict[a[i]] += 1;
     }
 
+    bool got_first = false;
+    int max = 0;
     for (int i = 0; i < turns; i++) {
-        bool yet = false;
-        for (int j = 0; j <= i && dict[i] != 0; j++) {
-            if (dict[j] - i > 0) {
-                yet = true;
+        if (dict[i] == 0) {
+            break;
+        }
+        if (dict[i] == 1) {
+            if (!got_first) 
+                got_first = true;
+            else
                 break;
-            }
         }
-        if (!yet) {
-            cout<<i<<endl;
-            return;
-        }
+        max++;
     }
-    cout<<turns<<endl;   
+    cout<<max<<endl;   
 }
 
 int main()
