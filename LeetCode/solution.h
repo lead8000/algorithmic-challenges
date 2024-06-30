@@ -2,6 +2,14 @@
 
 using namespace std;
 
+struct Node {
+    int value;
+    vector<int> inEdges;
+    vector<int> outEdges;
+
+    Node(int v): value(v) { }
+};
+
 //Definition for a binary tree node.
 struct TreeNode {
     int val;
@@ -33,4 +41,5 @@ public:
     vector<TreeNode*> allPossibleFBT(int n);
     vector<string> buildArray(vector<int>& target, int n);
     int pseudoPalindromicPaths (TreeNode* root);
+    vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges);
 };
