@@ -36,3 +36,4 @@ output
 obj/
 bin/
 test
+out

@@ -42,4 +42,5 @@ public:
     vector<string> buildArray(vector<int>& target, int n);
     int pseudoPalindromicPaths (TreeNode* root);
     vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges);
+    string frequencySort(string s);
 };
