@@ -29,17 +29,4 @@ int maxSumAfterPartitioning(vector<int>& arr, int k) {
                 }
             }
         }
-        else {
-            dp[i+1] = dp[i] + b;
-            kk = k;
-        } 
-    }
-
-    return dp[arr.size()-1];
-}
-
-int main() {
-    vector<int> arr = {1,15,7,9,2,5,10};
-    cout<<arr.back()<<endl;
-    return 0;
-}
+ 
