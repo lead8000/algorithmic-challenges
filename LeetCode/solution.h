@@ -43,4 +43,8 @@ public:
     int pseudoPalindromicPaths (TreeNode* root);
     vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges);
     string frequencySort(string s);
+    bool increasingTriplet(vector<int>& nums);
+    int compress(vector<char>& chars);
+    int maxArea(vector<int>& height);
+    int maxVowels(string s, int k);
 };

@@ -29,4 +29,14 @@ int maxSumAfterPartitioning(vector<int>& arr, int k) {
                 }
             }
         }
- 
+    }
+    return 0;
+} 
+
+int main() {
+    auto sol = Solution();
+
+    cout<<sol.maxVowels("leetcode", 3)<<endl;
+
+    return 0;
+}
