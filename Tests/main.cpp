@@ -33,32 +33,11 @@ int maxSumAfterPartitioning(vector<int>& arr, int k) {
     return 0;
 } 
 
-int longestSubarray(vector<int>& nums) {
-    int n = nums.size();
-    vector<int> accumLeftToRight(n+2), accumRightToLeft(n+2);
-
-    for (int i = 0; i < n; i++) {
-        if (nums[i] == 1)
-            accumLeftToRight[i+1] += accumLeftToRight[i] + 1;
-        if (nums[n-i-1] == 1)
-            accumRightToLeft[n-i] += accumRightToLeft[n-i+1] + 1;
-    }
-
-    // for (auto x: accumLeftToRight) cout<<x<<" ";
-    // cout<<endl;
-    for (auto x: accumRightToLeft) cout<<x<<" ";
-    cout<<endl;
-
-    int maxAmountOnes = 0;
-    for (int i = 0; i < n; i++) {
-        maxAmountOnes = max(maxAmountOnes, accumLeftToRight[i]+accumRightToLeft[i+2]);
-    }
-
-    return maxAmountOnes;
-}
-
 int main() {
-    vector<int> nums = {1,0,1,1};
-    cout<<longestSubarray(nums)<<endl;
+    TreeNode *root = new TreeNode(1, new TreeNode(-2), new TreeNode(-3));
+    auto sol = Solution();
+    
+    cout<<sol.pathSum(root, -2)<<endl;
+    
     return 0;
 }

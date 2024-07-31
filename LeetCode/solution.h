@@ -47,4 +47,5 @@ public:
     int compress(vector<char>& chars);
     int maxArea(vector<int>& height);
     int maxVowels(string s, int k);
+    int pathSum(TreeNode* root, int targetSum);
 };
